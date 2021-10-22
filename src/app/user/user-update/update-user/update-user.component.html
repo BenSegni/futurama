@@ -53,7 +53,7 @@
       <button class="cancel" (click)="cancel()" [disabled]="!userForm.dirty">
         Cancel
       </button>
-      <button class="submit" type="submit" [disabled]="!userForm.dirty">
+      <button class="submit" type="submit" [disabled]="!userForm.dirty || !userForm.valid">
         Update Details
       </button>
     </div>
