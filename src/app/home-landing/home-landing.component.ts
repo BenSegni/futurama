@@ -22,8 +22,8 @@ extends SubscriptionDirective
 
   public ngOnInit(): void {
     this.loadUserDetails();
-    this.assignUser();
     this.assignInitialUserDetails();
+    this.assignUser();
   }
 
   /**
