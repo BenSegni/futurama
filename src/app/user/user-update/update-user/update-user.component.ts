@@ -26,8 +26,8 @@ export class UpdateUserComponent
   ) {
     super(userService);
 
-    //listen for user browser refresh and ensure that we can persist state
-    //form values
+    //listen for user browser refresh and ensure that we can persist with
+    //patched form values
     this.monitorBrowserRefresh();
   }
 

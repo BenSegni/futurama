@@ -25,6 +25,12 @@ export class GlobalService extends SubscriptionDirective {
     throw error;
   }
 
+  /**
+   * GET, POST, PUT, DELETE CRUD calls can be added below GET - only needed GET for this example
+   * @param endpoint pass endpoint url
+   * @returns data from back end
+   */
+
   public get<T>(endpoint: string): Observable<T> {
     const uri = encodeURI(endpoint);
 

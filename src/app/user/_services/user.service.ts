@@ -12,7 +12,7 @@ import { User } from '../_models/user';
 export class UserService extends ServiceHelperDirective {
   /**
    *
-   * @param globalService handles httpClient and RESTFUL calls GET, PUT, POST, DELETE
+   * @param globalService handles httpClient and CRUD api calls GET, PUT, POST, DELETE
    * this extends subscription directive which in turn extends state manager directive
    */
   constructor(private globalService: GlobalService) {

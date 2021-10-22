@@ -13,6 +13,13 @@ export class UserExistingComponent extends UserDetailsDirective implements OnIni
     super(userService);
   }
 
+  /**
+   * this component is in place to indicate
+   * how we can set multiple states of the same data
+   * we can persist with initial state, but set other state
+   * types to manipulate in the DOM
+   */
+
   ngOnInit(): void {
     this.assignOriginalUserState();
   }
