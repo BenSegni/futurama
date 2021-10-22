@@ -1,15 +1,8 @@
 <section *ngIf="userDetail">
   <h2>{{ userDetail.firstName }}, Update your details here</h2>
-  <details *ngIf="initialUserDetail">
-    <summary>Existing Details for {{ initialUserDetail.firstName }}</summary>
-    <div class="details">
-      <p><small>Forename:</small> {{ initialUserDetail.firstName }}</p>
-      <p><small>Middle Names:</small> {{ initialUserDetail.middleNames }}</p>
-      <p><small>Surname:</small> {{ initialUserDetail.surName }}</p>
-      <p><small>Address:</small> {{ initialUserDetail.address }}</p>
-      <p><small>Job Role:</small> {{ initialUserDetail.jobRole }}</p>
-    </div>
-  </details>
+  
+  <app-user-existing></app-user-existing>
+
   <form
     *ngIf="userDetail"
     [formGroup]="userForm"

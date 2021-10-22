@@ -16,7 +16,6 @@ export class UpdateUserComponent
   implements OnInit, OnDestroy
 {
   public userDetail: User; //define userDetail to update state
-  public initialUserDetail: User;
   public userForm: FormGroup;
   private persistUserState: boolean;
 
@@ -33,7 +32,6 @@ export class UpdateUserComponent
   }
 
   public ngOnInit(): void {
-    this.assignOriginalUserState();
     this.assignUserState();
     this.createForm();
     this.maintainUserFormState();
