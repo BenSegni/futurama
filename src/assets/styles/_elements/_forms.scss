@@ -1,0 +1,13 @@
+@import "../_mixins/forms";
+@import "../color";
+@import '../_mixins/text';
+
+form {
+  @include form;
+  @include input;
+  @include body-font;
+}
+
+label {
+  @include label;
+}

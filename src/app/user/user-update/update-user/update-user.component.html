@@ -1,0 +1,61 @@
+<section *ngIf="userDetail">
+  <h2>{{ userDetail.firstName }}, Update your details here</h2>
+  <form
+    *ngIf="userDetail"
+    [formGroup]="userForm"
+    name="userForm"
+    (ngSubmit)="onSubmit(userForm)"
+  >
+    <label>
+      <app-form-label
+        [config]="{ labelText: 'First Name', required: true }"
+      ></app-form-label>
+      <input type="text" formControlName="firstName" />
+    </label>
+    <label>
+      <app-form-label
+        [config]="{ labelText: 'Middle Names', required: true }"
+      ></app-form-label>
+      <input type="text" formControlName="middleNames" />
+    </label>
+    <label>
+      <app-form-label
+        [config]="{ labelText: 'Surname', required: true }"
+      ></app-form-label>
+      <input type="text" formControlName="surName" />
+    </label>
+    <label>
+      <app-form-label
+        [config]="{ labelText: 'Address', required: true }"
+      ></app-form-label>
+      <input type="text" formControlName="address" />
+    </label>
+    <label>
+      <app-form-label
+        [config]="{ labelText: 'Job Role', required: true }"
+      ></app-form-label>
+      <input type="text" formControlName="jobRole" />
+    </label>
+    <label>
+      <app-form-label
+        [config]="{ labelText: 'Avatar', required: true }"
+      ></app-form-label>
+      <input type="text" formControlName="avatar" />
+    </label>
+    <label>
+      <app-form-label
+        [config]="{ labelText: 'Highlight Reel', required: true }"
+      ></app-form-label>
+      <input type="text" formControlName="highlightReel" />
+    </label>
+
+    <div class="form-buttons">
+      <button class="cancel" (click)="cancel()" [disabled]="!userForm.dirty">
+        Cancel
+      </button>
+      <button class="submit" type="submit" [disabled]="!userForm.dirty">
+        Update Details
+      </button>
+    </div>
+  </form>
+</section>

@@ -1,0 +1,32 @@
+@import "./text";
+
+@mixin form {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+}
+
+@mixin input {
+  input {
+    color: $black;
+    background-color: $translucent;
+    border-radius: 0.25rem;
+    border: 1px solid $off-white;
+    line-height: 1.5rem;
+    margin-bottom: 0.75rem;
+    padding: 0.5rem;
+
+    @include body-font;
+  }
+}
+
+@mixin label {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25rem;
+  color: $red;
+
+  @include small-text;
+}

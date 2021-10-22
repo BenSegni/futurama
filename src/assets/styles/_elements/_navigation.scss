@@ -1,0 +1,28 @@
+@import "../color";
+@import "../_mixins/text";
+
+nav {
+  display: flex;
+  padding: 1rem 0.75rem;
+  background-color: $red;
+  margin: 1rem 0;
+  border-radius: 0.25rem;
+  ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+      display: block;
+      padding: 0.25rem 1rem;
+      a {
+        color: $white;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  @include body-font;
+}

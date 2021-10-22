@@ -1,0 +1,12 @@
+<app-user-header></app-user-header>
+
+<section class="card" *ngIf="userDetail">
+  <img [src]="userDetail.avatar" alt="avatar" />
+  <div class="details">
+    <p><small>Forename:</small> {{ userDetail.firstName }}</p>
+    <p><small>Middle Names:</small> {{ userDetail.middleNames }}</p>
+    <p><small>Surname:</small> {{ userDetail.surName }}</p>
+    <p><small>Address:</small> {{ userDetail.address }}</p>
+    <p><small>Job Role:</small> {{ userDetail.jobRole }}</p>
+  </div>
+</section>

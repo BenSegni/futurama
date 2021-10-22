@@ -1,0 +1,11 @@
+@mixin wallpaper {
+  background: url("https://www.teahub.io/photos/full/213-2139144_futurama-hubert-farnsworth-png.png");
+  background-repeat: no-repeat;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.logo {
+  display: block;
+  height: 3rem;
+  width: auto;
+}

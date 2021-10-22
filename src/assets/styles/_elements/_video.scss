@@ -1,0 +1,8 @@
+@import '../color';
+
+iframe {
+    display: block;
+    width: 100%;
+    height: 25rem;
+    border: 0.25rem solid $red;
+}

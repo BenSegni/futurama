@@ -1,0 +1,28 @@
+@import "../color";
+
+.card {
+  display: flex;
+  flex-direction: row;
+  border-radius: 0.25rem;
+  border: 1px solid $off-white;
+  padding: 0;
+  background-color: $white;
+
+  img {
+    display: flex;
+    justify-content: center;
+    height: 17rem;
+    margin-right: 2rem;
+  }
+
+  .details {
+    p {
+      display: flex;
+      flex-direction: column;
+    }
+
+    small {
+      color: $red;
+    }
+  }
+}

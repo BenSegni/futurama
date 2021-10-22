@@ -1,0 +1,8 @@
+<ng-container *ngIf="userDetail">
+  <h2>{{ userDetail.firstName }}, here's your best bits!</h2>
+  <iframe
+    [src]="userDetail.highlightReel | safe: 'resourceUrl'"
+    frameborder="0"
+    allowfullscreen
+  ></iframe>
+</ng-container>

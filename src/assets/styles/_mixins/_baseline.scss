@@ -1,0 +1,15 @@
+@import '../_mixins/text';
+@import '../_mixins/images';
+
+@mixin body-baseline {
+  width: 50vw;
+  margin: 1rem auto 5rem auto;
+  padding: 0;
+}
+
+body {
+  @include body-baseline;
+  @include body-font;
+  @include medium-text;
+  @include wallpaper;
+}
