@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from 'src/app/user/_models/user';
 import { UserService } from 'src/app/user/_services/user.service';
 import { UserDetailsDirective } from 'src/app/_common/_helpers/user-details.directive';
 
@@ -9,8 +8,6 @@ import { UserDetailsDirective } from 'src/app/_common/_helpers/user-details.dire
   styleUrls: ['./home-video.component.scss'],
 })
 export class HomeVideoComponent extends UserDetailsDirective implements OnInit {
-  public userDetail: User;
-
   constructor(userService: UserService) {
     super(userService);
   }
