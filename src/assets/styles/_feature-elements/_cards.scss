@@ -14,15 +14,15 @@
     height: 17rem;
     margin-right: 2rem;
   }
+}
 
-  .details {
-    p {
-      display: flex;
-      flex-direction: column;
-    }
+.details {
+  p {
+    display: flex;
+    flex-direction: column;
+  }
 
-    small {
-      color: $red;
-    }
+  small {
+    color: $red;
   }
 }

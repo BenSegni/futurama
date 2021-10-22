@@ -24,7 +24,7 @@ export class UserComponent extends UserDetailsDirective implements OnInit {
    * as a component variable
    */
   public ngOnInit(): void {
-    this.assignUser();
+    this.assignUserState();
   }
 
   

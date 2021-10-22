@@ -16,6 +16,6 @@ export class UserHeaderComponent
   }
 
   public ngOnInit(): void {
-    this.assignUser();
+    this.assignUserState();
   }
 }

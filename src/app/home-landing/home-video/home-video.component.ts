@@ -17,6 +17,6 @@ export class HomeVideoComponent extends UserDetailsDirective implements OnInit {
 
   public ngOnInit(): void {
     //get user details with this one method
-    this.assignUser();
+    this.assignUserState();
   }
 }

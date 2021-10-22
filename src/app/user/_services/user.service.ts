@@ -11,7 +11,7 @@ import { User } from '../_models/user';
 })
 export class UserService extends ServiceHelperDirective {
   /**
-   * 
+   *
    * @param globalService handles httpClient and RESTFUL calls GET, PUT, POST, DELETE
    * this extends subscription directive which in turn extends state manager directive
    */
@@ -20,7 +20,7 @@ export class UserService extends ServiceHelperDirective {
   }
 
   /**
-   * 
+   *
    * @returns observable from endpoint
    * this can be extended further to make use of
    * mappers
@@ -29,11 +29,14 @@ export class UserService extends ServiceHelperDirective {
   public getUserDetails(): Observable<User> {
     return this.globalService
       .get<User>(this.endpoint())
-      .pipe(this.updateState(UserState.User));
+      .pipe(
+        this.updateState(UserState.User),
+        this.updateState(UserState.initialUserState)
+      );
   }
 
   /**
-   * 
+   *
    * @returns a string path using the api config e.g http:localhost:4200 + the unique endpoint
    */
 

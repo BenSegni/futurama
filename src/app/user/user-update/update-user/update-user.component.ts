@@ -2,7 +2,6 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
-import { LoggedInUserState } from 'src/app/user/_enums/user-state';
 import { User } from 'src/app/user/_models/user';
 import { UserService } from 'src/app/user/_services/user.service';
 import { UserDetailsDirective } from 'src/app/_common/_helpers/user-details.directive';
@@ -17,6 +16,7 @@ export class UpdateUserComponent
   implements OnInit, OnDestroy
 {
   public userDetail: User; //define userDetail to update state
+  public initialUserDetail: User;
   public userForm: FormGroup;
   private persistUserState: boolean;
 
@@ -33,12 +33,13 @@ export class UpdateUserComponent
   }
 
   public ngOnInit(): void {
-    this.assignUser();
+    this.assignOriginalUserState();
+    this.assignUserState();
     this.createForm();
     this.maintainUserFormState();
   }
 
-  private createForm(): void {
+  private createForm(): void {    
     this.userForm = this.fb.group({
       firstName: [null, Validators.required],
       middleNames: [null, Validators.required],
@@ -69,7 +70,7 @@ export class UpdateUserComponent
 
   private maintainUserFormState(): void {
     if (this.persistUserState) {
-      //give the component time to obtain 
+      //give the component time to obtain
       //user state and then create form to populate fields
       setTimeout(() => {
         this.createForm();

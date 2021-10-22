@@ -1,8 +1,15 @@
+//elements
 @import "./_elements/forms";
 @import "./_elements/buttons";
 @import "./_elements/navigation";
-@import "./_feature-elements/cards";
 @import "./_elements/typography";
-@import "./_mixins/images";
 @import "./_elements/video";
-@import './_mixins/baseline';
+@import "./_elements/details";
+@import "./_elements/lists";
+
+//feature elements
+@import "./_feature-elements/cards";
+
+//mixins
+@import "./_mixins/images";
+@import "./_mixins/baseline";

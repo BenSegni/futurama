@@ -1,0 +1,10 @@
+@import '../color';
+@import './typography';
+
+details {
+    border: 1px solid $red;
+    border-radius: 0.25rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: $white;
+}
