@@ -5,6 +5,7 @@ import { UpdateUserComponent } from './update-user/update-user.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedElementsModule } from 'src/app/_shared/shared-elements/shared-elements.module';
 import { UserExistingComponent } from './user-existing/user-existing.component';
+import { RoutePaths } from 'src/app/_common/_enum/routes.enum';
 
 //setting this as a module was not necessary, 
 //but just wanted to make a point of how we are able 
@@ -16,7 +17,7 @@ import { UserExistingComponent } from './user-existing/user-existing.component';
     CommonModule,
     RouterModule.forChild([
       {
-        path: '',
+        path: RoutePaths.Home,
         component: UpdateUserComponent,
       },
     ]),

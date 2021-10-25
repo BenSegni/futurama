@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { UserModule } from '../user/user.module';
 import { HomeVideoComponent } from './home-video/home-video.component';
 import { SafePipe } from '../_common/_helpers/_pipes/safe.pipe';
+import { RoutePaths } from '../_common/_enum/routes.enum';
 
 @NgModule({
   declarations: [
@@ -18,20 +19,20 @@ import { SafePipe } from '../_common/_helpers/_pipes/safe.pipe';
     CommonModule,
     RouterModule.forChild([
       {
-        path: '',
+        path: RoutePaths.Home,
         component: HomeLandingComponent,
         children: [
           {
-            path: '',
-            redirectTo: 'video',
+            path: RoutePaths.Home,
+            redirectTo: RoutePaths.Video,
             pathMatch: 'full',
           },
           {
-            path: 'video',
+            path: RoutePaths.Video,
             component: HomeVideoComponent,
           },
           {
-            path: 'update',
+            path: RoutePaths.Update,
             loadChildren: () =>
               import('../user/user-update/user-update.module').then(
                 (m) => m.UserUpdateModule

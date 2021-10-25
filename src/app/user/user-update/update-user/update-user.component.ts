@@ -60,7 +60,7 @@ export class UpdateUserComponent
             response instanceof NavigationEnd
         )
       )
-      .subscribe((event) => {
+      .subscribe((event: NavigationEnd) => {
         this.persistUserState =
           event.id === 1 && event.url === event.urlAfterRedirects;
       });
