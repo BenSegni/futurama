@@ -40,7 +40,7 @@ export class HomeLandingComponent
       (user: User) => {
         this.initialUserDetail = user;
         //once dispatch has returned successful, set state from api call
-        this.userService.set(InitialLoggedInUserState, this.userDetail);
+        this.userService.set(InitialLoggedInUserState, this.initialUserDetail);
       },
       (errors: HttpErrorResponse) => {
         console.log('An Error has occurred', errors.message);

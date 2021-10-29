@@ -37,7 +37,7 @@ export class UpdateUserComponent
     this.maintainUserFormState();
   }
 
-  private createForm(): void {    
+  private createForm(): void {
     this.userForm = this.fb.group({
       firstName: [null, Validators.required],
       middleNames: [null, Validators.required],
