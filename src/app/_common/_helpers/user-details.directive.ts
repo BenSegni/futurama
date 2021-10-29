@@ -2,12 +2,11 @@ import { Directive } from '@angular/core';
 import { skipWhile } from 'rxjs/operators';
 import {
   InitialLoggedInUserState,
-  LoggedInUserState,
+  LoggedInUserState
 } from 'src/app/user/_enums/user-state';
 import { User } from 'src/app/user/_models/user';
 import { UserService } from 'src/app/user/_services/user.service';
 import { SubscriptionDirective } from './subscription.directive';
-import { State } from './_models/state';
 
 @Directive({
   selector: '[appUserDetails]',
