@@ -31,7 +31,7 @@ export class UserService extends ServiceHelperDirective {
       .get<User>(this.endpoint())
       .pipe(
         this.updateState(UserState.User),
-        this.updateState(UserState.initialUserState)
+        // this.updateState(UserState.initialUserState)
       );
   }
 

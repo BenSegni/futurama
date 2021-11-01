@@ -27,25 +27,7 @@ export class HomeLandingComponent
 
   public ngOnInit(): void {
     this.loadUserDetails();
-    this.assignInitialUserDetails();
     this.assignUser();
-  }
-
-  /**
-   * listen for state
-   */
-  private assignInitialUserDetails(): void {
-    this.subscribe(
-      this.userService.get<User>(UserState.initialUserState),
-      (user: User) => {
-        this.initialUserDetail = user;
-        //once dispatch has returned successful, set state from api call
-        this.userService.set(InitialLoggedInUserState, this.initialUserDetail);
-      },
-      (errors: HttpErrorResponse) => {
-        console.log('An Error has occurred', errors.message);
-      }
-    );
   }
 
   private assignUser(): void {
@@ -55,6 +37,7 @@ export class HomeLandingComponent
         this.userDetail = user;
         //once dispatch has returned successful, set state from api call
         this.userService.set(LoggedInUserState, this.userDetail);
+        this.userService.set(InitialLoggedInUserState, this.userDetail);
       },
       (errors: HttpErrorResponse) => {
         console.log('An Error has occurred', errors.message);
