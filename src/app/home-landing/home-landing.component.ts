@@ -18,7 +18,6 @@ export class HomeLandingComponent
   extends SubscriptionDirective
   implements OnInit
 {
-  public initialUserDetail: User;
   public userDetail: User;
 
   constructor(public userService: UserService) {
