@@ -15,6 +15,20 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
+    "paths": {
+      "@bensegni/service-helper": [
+        "dist/bensegni/service-helper/bensegni-service-helper",
+        "dist/bensegni/service-helper"
+      ],
+      "bbksdev-service-helper": [
+        "dist/bbksdev-service-helper/bbksdev-service-helper",
+        "dist/bbksdev-service-helper"
+      ],
+      "service-helper": [
+        "dist/service-helper/service-helper",
+        "dist/service-helper"
+      ]
+    },
     "target": "es2017",
     "module": "es2020",
     "lib": [

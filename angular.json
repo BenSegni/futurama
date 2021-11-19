@@ -99,6 +99,68 @@
           }
         }
       }
+    },
+    "bbksdev-service-helper": {
+      "projectType": "library",
+      "root": "projects/bbksdev-service-helper",
+      "sourceRoot": "projects/bbksdev-service-helper/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/bbksdev-service-helper/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/bbksdev-service-helper/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/bbksdev-service-helper/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/bbksdev-service-helper/src/test.ts",
+            "tsConfig": "projects/bbksdev-service-helper/tsconfig.spec.json",
+            "karmaConfig": "projects/bbksdev-service-helper/karma.conf.js"
+          }
+        }
+      }
+    },
+    "@bensegni/service-helper": {
+      "projectType": "library",
+      "root": "projects/bensegni/service-helper",
+      "sourceRoot": "projects/bensegni/service-helper/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/bensegni/service-helper/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/bensegni/service-helper/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/bensegni/service-helper/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/bensegni/service-helper/src/test.ts",
+            "tsConfig": "projects/bensegni/service-helper/tsconfig.spec.json",
+            "karmaConfig": "projects/bensegni/service-helper/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "defaultProject": "state-manager-demo"

@@ -29,10 +29,7 @@ export class UserService extends ServiceHelperDirective {
   public getUserDetails(): Observable<User> {
     return this.globalService
       .get<User>(this.endpoint())
-      .pipe(
-        this.updateState(UserState.User),
-        // this.updateState(UserState.initialUserState)
-      );
+      .pipe(this.updateState(UserState.User));
   }
 
   /**
