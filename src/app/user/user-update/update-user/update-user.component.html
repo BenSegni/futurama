@@ -1,6 +1,6 @@
 <section *ngIf="userDetail">
   <h2>{{ userDetail.firstName }}, Update your details here</h2>
-  
+
   <app-user-existing></app-user-existing>
 
   <form
@@ -13,43 +13,43 @@
       <app-form-label
         [config]="{ labelText: 'First Name', required: true }"
       ></app-form-label>
-      <input type="text" formControlName="firstName" />
+      <input type="text" formControlName="firstName" name="firstName" />
     </label>
     <label>
       <app-form-label
         [config]="{ labelText: 'Middle Names', required: true }"
       ></app-form-label>
-      <input type="text" formControlName="middleNames" />
+      <input type="text" formControlName="middleNames" name="middleNames" />
     </label>
     <label>
       <app-form-label
         [config]="{ labelText: 'Surname', required: true }"
       ></app-form-label>
-      <input type="text" formControlName="surName" />
+      <input type="text" formControlName="surName" name="surName" />
     </label>
     <label>
       <app-form-label
         [config]="{ labelText: 'Address', required: true }"
       ></app-form-label>
-      <input type="text" formControlName="address" />
+      <input type="text" formControlName="address" name="address" />
     </label>
     <label>
       <app-form-label
         [config]="{ labelText: 'Job Role', required: true }"
       ></app-form-label>
-      <input type="text" formControlName="jobRole" />
+      <input type="text" formControlName="jobRole" name="jobRole" />
     </label>
     <label>
       <app-form-label
         [config]="{ labelText: 'Avatar', required: true }"
       ></app-form-label>
-      <input type="text" formControlName="avatar" />
+      <input type="text" formControlName="avatar" name="avatar" />
     </label>
     <label>
       <app-form-label
         [config]="{ labelText: 'Highlight Reel', required: true }"
       ></app-form-label>
-      <input type="text" formControlName="highlightReel" />
+      <input type="text" formControlName="highlightReel" name="highlightReel" />
     </label>
 
     <div class="form-buttons">
