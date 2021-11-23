@@ -8,7 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "test:watch": "ng test --code-coverage --progress=false --watch",
-    "cypress": "cypress open"
+    "cy-local": "cypress open",
+    "cy-live": "npx cypress run --record --key 793d6a07-36c0-491f-9f4c-1263d9d0d8bc"
   },
   "private": true,
   "dependencies": {

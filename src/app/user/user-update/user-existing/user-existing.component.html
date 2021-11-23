@@ -1,6 +1,8 @@
-<details *ngIf="initialUserDetail">
-  <summary>Existing Details for {{ initialUserDetail.firstName }}</summary>
-  <div class="details">
+<details data-cy="details-element">
+  <summary data-cy="summary-element">
+    Existing Details for {{ initialUserDetail.firstName }}
+  </summary>
+  <div class="details" data-cy="details-card">
     <p><small>Forename:</small> {{ initialUserDetail.firstName }}</p>
     <p><small>Middle Names:</small> {{ initialUserDetail.middleNames }}</p>
     <p><small>Surname:</small> {{ initialUserDetail.surName }}</p>

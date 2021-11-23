@@ -1,6 +1,6 @@
 <app-user-header></app-user-header>
 
-<section class="card" *ngIf="userDetail">
+<section data-cy="user-card" class="card" *ngIf="userDetail">
   <img [src]="userDetail.avatar" alt="avatar" />
   <div class="details">
     <p><small>Forename:</small> {{ userDetail.firstName }}</p>
