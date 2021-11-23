@@ -1,8 +1,17 @@
 <ng-container *ngIf="userDetail">
   <h2 data-cy="video-header">{{ userDetail.firstName }}, here's your best bits!</h2>
   <iframe
+    data-cy="video-highlights"
     [src]="userDetail.highlightReel | safe: 'resourceUrl'"
     frameborder="0"
     allowfullscreen
   ></iframe>
+  <br />
+  <a
+    data-cy="youtube-link"
+    class="primary-button"
+    href="https://www.youtube.com/watch?v=ln4rfYh7ng0"
+    target="_blank"
+    >Watch on YouTube</a
+  >
 </ng-container>

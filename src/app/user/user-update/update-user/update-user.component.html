@@ -4,6 +4,7 @@
   <app-user-existing></app-user-existing>
 
   <form
+    data-cy="user-form"
     *ngIf="userDetail"
     [formGroup]="userForm"
     name="userForm"
@@ -57,6 +58,7 @@
         Cancel
       </button>
       <button
+        data-cy="user-form-submit-button"
         class="submit"
         type="submit"
         [disabled]="!userForm.dirty || !userForm.valid"

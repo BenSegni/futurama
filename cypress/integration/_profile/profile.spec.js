@@ -5,6 +5,15 @@ describe("Profile", () => {
   //profile image exists
   it("should display a profile image", () => {
     cy.get("[data-cy='user-card']").find("img").should("be.visible");
+
+    //check image url is correct
+    cy.get("[data-cy='user-card']")
+      .find("img")
+      .should("have.attr", "src")
+      .should(
+        "equal",
+        "https://assets.mycast.io/actor_images/actor-bender-bending-rodriguez-238367_large.jpg?1625487027"
+      );
   });
 
   it("should show correct details", () => {
