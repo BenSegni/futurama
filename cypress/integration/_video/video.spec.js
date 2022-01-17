@@ -1,19 +1,17 @@
-import attributes from "../../_helpers/attributes.enum";
+import attributes from "../../_helpers/_attribute-enums/attributes.enum";
+import userOne from "../../_helpers/_user-mocks/user.enum";
 
-describe("video display", () => {
+describe("Testing Video Display", () => {
   it("should be visible", () => {
     cy.visit("/video");
-
     cy.scrollTo(0, 400);
-
-    cy.headerType(`${attributes.VIDEO}`, "Bender");
-
+    cy.headerType(`${attributes.VIDEO}`, `${userOne.FORENAME}`);
     cy.get("[data-cy='video-highlights'").should("be.visible");
   });
 
-  it("should allow the user to watch on youtube via link", () => {
+  it("should allow the user to watch on youtube via button link", () => {
     cy.get("[data-cy='youtube-link']")
       .should("have.attr", "href")
-      .should("equal", "https://www.youtube.com/watch?v=ln4rfYh7ng0");
+      .and("equal", `${userOne.VIDEO_URL}`);
   });
 });

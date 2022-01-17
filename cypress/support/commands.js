@@ -1,5 +1,5 @@
-import headerText from "../_helpers/text.enum";
-import attributes from "../_helpers/attributes.enum";
+import headerText from "../_helpers/_text-enums/text.enum";
+import attributes from "../_helpers/_attribute-enums/attributes.enum";
 
 Cypress.Commands.add("navigate", (link) => cy.get(`[data-cy=${link}]`).click());
 

@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ApiConfig } from 'src/app/_common/_global_services/api.enum';
 import { GlobalService } from 'src/app/_common/_global_services/global.service';
 import { ServiceHelperDirective } from 'src/app/_common/_helpers/service-helper.directive';
 import { UserState } from '../_enums/user-state';
 import { User } from '../_models/user';
+import { ApiConfig } from '@api-config';
 
 @Injectable({
   providedIn: 'root',
