@@ -25,7 +25,7 @@ export class UserDetailsDirective extends SubscriptionDirective {
    * will make for less writing of code to listen for user state
    */
 
-  public assignOriginalUserState(): void {
+  protected assignOriginalUserState(): void {
     this.subscribe(
       this.userService
         .get<User>(InitialLoggedInUserState)
@@ -36,7 +36,7 @@ export class UserDetailsDirective extends SubscriptionDirective {
     );
   }
 
-  public assignUserState(): void {
+  protected assignUserState(): void {
     this.subscribe(
       this.userService
         .get<User>(LoggedInUserState)
@@ -52,7 +52,7 @@ export class UserDetailsDirective extends SubscriptionDirective {
    * we can call this where the component class has been extended to this directive
    */
 
-  public setLoggedUser(): void {
+  protected setLoggedUser(): void {
     this.userService.set(LoggedInUserState, this.userDetail);
   }
 }

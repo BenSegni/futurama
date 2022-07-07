@@ -1,4 +1,4 @@
-<details data-cy="details-element">
+<details *ngIf="initialUserDetail" data-cy="details-element">
   <summary data-cy="summary-element">
     Existing Details for {{ initialUserDetail.firstName }}
   </summary>

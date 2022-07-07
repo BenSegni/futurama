@@ -1,3 +1,4 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HomeVideoComponent } from './home-video.component';
@@ -8,7 +9,8 @@ describe('HomeVideoComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HomeVideoComponent ]
+      declarations: [ HomeVideoComponent ],
+      imports: [HttpClientTestingModule]
     })
     .compileComponents();
   });

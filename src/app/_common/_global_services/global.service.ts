@@ -27,7 +27,7 @@ export class GlobalService extends SubscriptionDirective {
   public get<T>(endpoint: string): Observable<T> {
     const uri = encodeURI(endpoint);
 
-    const encodedUri = `http://${this.api}:${this.port}` + '/' + uri;
+    const encodedUri = `http://${this.api}:${this.port}/${uri}`;
 
     const request: Observable<T> = this.http.get<{ data: T }>(encodedUri).pipe(
       map((response: any) => {
